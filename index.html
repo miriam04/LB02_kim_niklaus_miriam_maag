@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>LB 02</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="#">LB 02 <span>by Kim Niklaus und Miriam Maag</span></a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+
+				<!-- 1 -->
+					<section id="one" class="wrapper style1">
+
+						<div class="image fit flush">
+							<img src="images/pic02.jpg" alt="" />
+						</div>
+						<header class="special">
+							<h2>Wildlife</h2>
+							<p>Unsere Tiere im Wald</p>
+						</header>
+				<!--HTML-DOM-->		
+				'<header>
+						'<div class="content">
+							<h3>Bild tauschen</h3>
+							<p><img id="pic" src="images/pic01.jpg" alt="Pic01" width="400"</p>
+						</br>
+							<button onclick="changePicture()" class="button">Bild tauschen</button>
+							<script>
+								let xchange = true;
+								function changePicture(){
+									let current = document.getElementById("pic");
+									if (xchange){
+										current.src = "images/pic02.jpg";
+										xchange = false;
+									} else {
+										current.src = "images/pic01.jpg";
+										xchange = true;
+									}
+								}
+							</script>
+						</div>
+					</section>
+				</header>
+				<!--JSON Format-->
+				<header>
+					<h3>Rehe</h3>
+					<h4>Familie</h4>
+					<p id="familie"></p>
+				</header>	
+					<script>
+						let reh = {
+							"familie": "Hirsche",
+							"unterfamilie": "Trughirsche",
+							"gattung": "Rehe"
+						}
+						//Familie
+						let htmlObj = document.getElementById("familie")
+						htmlObj.innerHTML =
+						`Familie: ${reh.familie}<br>`+
+						`Unterfamilie: ${reh.unterfamilie}<br>`+
+						`Gattung: ${reh.Gattung}<br>`;
+					</script>			
+				<!--JS Objekt-->
+					<section>
+						<script>
+							let person1 = {
+								firstName: "Kim",
+								lastName: "Niklaus",
+								gender: "weiblich",
+								getFullName(){
+									return `Ich heisse ${this.firstName} ${this.lastName}.`;
+								}
+							}
+							//Ausgabe
+							console.log(person1.gender);
+							console.log(person1.getFullName())
+						</script>
+					</section>
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>Animals are better than humans!</h2>
+							<p>Ein paar schöne Bilder</p>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic03.jpg"><img src="images/pic03.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic01.jpg"><img src="images/pic01.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic04.jpg"><img src="images/pic04.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic05.jpg"><img src="images/pic05.jpg" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- 4 -->
+					<section id="three" class="wrapper">
+						<div class="spotlight">
+							<div class="image flush"><img src="images/pic06.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>Wolf</h3>
+								<p>Der Wolf ist rezent das größte Raubtier aus der Familie der Hunde. Wölfe leben meist in Familienverbänden, fachsprachlich Rudel genannt. Hauptbeute sind in den meisten Regionen mittelgroße bis große Huftiere.</p>
+							</div>
+						</div>
+						<div class="spotlight alt">
+							<div class="image flush"><img src="images/pic07.jpg" alt="" /></div>
+							<div  class="inner">
+								<h3>Pferde</h3>
+								<p>Das Hauspferd ist ein weit verbreitetes Haus- bzw. Nutztier, das in zahlreichen Rassen auf der ganzen Welt existiert. Das Hauspferd ist die domestizierte Form des Wildpferdes, das mit den Eseln und Zebras die Familie der Pferde innerhalb der Ordnung der Unpaarhufer bildet.</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/pic08.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>Dachs</h3>
+								<p>Der Europäische Dachs ist ein Raubtier aus der Familie der Marder und eine von vier Arten der Gattung Meles, die noch bis Anfang der 2000er Jahre in einer Art zusammengefasst waren. Volkstümlich wird der Dachs auch – vor allem in der Fabel – als „Grimbart“ bezeichnet.</p>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</section>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Bildungszentrum Zürichsee BM 19c LB 02 
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
